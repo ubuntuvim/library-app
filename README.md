@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 # Library-app
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
+=======
+# library-app
+一个基于Ember.js的图书管理系统，主要是用于学习、交流。
+
+
+>>>>>>> origin/master
 
 ## Prerequisites
 
