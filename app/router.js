@@ -14,6 +14,7 @@ Router.map(function() {
 
   this.route('admin', function() {
     this.route('invitation');
+    this.route('contact');
   });
 
   this.route('libraries', function() {
