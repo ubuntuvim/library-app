@@ -38,13 +38,8 @@ export default Ember.Controller.extend({
                 newContact.save().then((responseMessage) => {
                     this.set('model.responseMessage', `Thank you! We've just saved your email address: ${responseMessage.get('email')}message is ${responseMessage.get('message')}`);
                     //  清空输入内容
-                    // this.set('model.email', '');
-                    // this.set('model.message', '');
-                    // 或者
-                    let model = this.get('model');
-                    if (model.get('isNew')) {
-                      model.destroyRecord();
-                    }
+                    this.set('model.email', '');
+                    this.set('model.message', '');
                 });
             }
         }
