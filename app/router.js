@@ -19,6 +19,8 @@ Router.map(function() {
 
   this.route('libraries', function() {
     this.route('new');
+    // :library_id是一个动态段，会根据实际的URL变化
+    this.route('edit', { path: '/:library_id/edit' });
   });
 });
 
