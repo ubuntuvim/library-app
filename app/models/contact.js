@@ -1,5 +1,7 @@
 // app/models/contact.js
 
+//  记得要手动导入Ember
+import Ember from 'ember';
 import DS from 'ember-data';
 
 export default DS.Model.extend({
