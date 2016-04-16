@@ -14,7 +14,9 @@ Router.map(function() {
 
   this.route('admin', function() {
     this.route('invitation');
-    this.route('contact');
+    this.route('contact', function() {
+      this.route('edit', { path: '/:contact_id/edit' });
+    });
   });
 
   this.route('libraries', function() {

@@ -1,4 +1,5 @@
-{{! app/templates/contact.hbs}}
+{{! app/templates/admin/contact/edit.hbs}}
+
 <div class="col-md-6 col-xs-6">
    <form>
      <div class="form-group">
@@ -10,17 +11,7 @@
          {{textarea class="form-control" placeholder="Your message. (At least 5 characters.)" rows="7" value=model.message}}
      </div>
 
-     <button class="btn btn-primary" disabled={{model.isDisabled}} {{action 'saveContact' model}}>Send</button>
-     <!-- 使用手动判断方式实现 -->
-     <!-- <button class="btn btn-primary" disabled={{model.isDisabled2}} {{action 'saveInvitation' model}}>Send</button> -->
+     <button class="btn btn-primary" disabled={{model.isDisabled}} {{action 'saveContact' model}}>Save</button>
+     {{#link-to 'admin.contact' class="btn btn-default"}}Return{{/link-to}}
    </form>
-
-   <div>
-       <br><br><br><br>
-      {{! 显示提示信息}}
-      {{#if model.responseMessage}}
-       <div class="alert alert-success">{{model.responseMessage}}</div>
-     {{/if}}
-   </div>
-
 </div>

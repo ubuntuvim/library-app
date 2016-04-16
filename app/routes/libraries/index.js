@@ -9,11 +9,11 @@ export default Ember.Route.extend({
   actions: {
       // 删除一个library记录
       deleteLibrary(library) {  //参数library已经在模板中传递过来
-      let confirmation = confirm('Are you sure?');
+          let confirmation = confirm('Are you sure?');
 
-      if (confirmation) {
-        library.destroyRecord();
-      }
+          if (confirmation) {
+            library.destroyRecord();
+          }
     }
   }
 });

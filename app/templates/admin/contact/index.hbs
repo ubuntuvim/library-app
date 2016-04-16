@@ -1,0 +1,28 @@
+{{! app/templates/admin/contact/index.hbs}}
+
+<h1>Contacts</h1>
+
+<table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+          <th>ID</th>
+          <th>E-mail</th>
+          <th>Message</th>
+          <th>Operation</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each model as |contact|}}
+        <tr>
+            <th>{{contact.id}}</th>
+            <td>{{contact.email}}</td>
+            <td>{{contact.message}}</td>
+            <td>
+                {{#link-to 'admin.contact.edit' contact.id class='btn btn-success btn-xs'}}Edit{{/link-to}}
+                <button class="btn btn-danger btn-xs" {{action 'deleteContact' contact}}>Delete</button>
+            </td>
+        </tr>
+    {{/each}}
+
+    </tbody>
+</table>
