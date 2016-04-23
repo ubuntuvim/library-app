@@ -1,0 +1,24 @@
+<!-- app/templates/components/seeder-block.hbs -->
+<div class="row">
+  <div class="col-md-12">
+    <h3>{{sectionTitle}}</h3>
+
+    <div class="row">
+      <div class="form-horizontal">
+        <label class="col-sm-2 control-label">Number of new records:</label>
+        <div class="col-sm-2">
+          {{input value=counter class='form-control'}}
+        </div>
+        <div class="col-sm-4">
+          <button class="btn btn-primary" {{action 'generateAction'}}>Generate {{sectionTitle}}</button>
+          {{#fader-label isShowing=createReady}}Created!{{/fader-label}}
+        </div>
+        <div class="col-sm-4">
+          <button class="btn btn-danger" {{action 'deleteAction'}}>Delete All {{sectionTitle}}</button>
+          {{#fader-label isShowing=deleteReady}}Deleted!{{/fader-label}}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

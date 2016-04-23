@@ -17,6 +17,7 @@ Router.map(function() {
     this.route('contact', function() {
       this.route('edit', { path: '/:contact_id/edit' });
     });
+    this.route('seeder');
   });
 
   this.route('libraries', function() {

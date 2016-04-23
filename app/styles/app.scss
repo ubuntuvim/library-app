@@ -1,4 +1,4 @@
-
+// app/styles/app.scss
 @import 'bootstrap';
 
 body {
@@ -11,4 +11,12 @@ html {
 
 .library-item {
   min-height: 150px;
+}
+
+.label-fade {
+  opacity: 0;
+  @include transition(all 0.5s);
+  &.label-show {
+    opacity: 1;
+  }
 }

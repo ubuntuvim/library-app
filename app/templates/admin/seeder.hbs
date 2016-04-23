@@ -1,0 +1,26 @@
+<!-- app/templates/admin/seeder.hbs -->
+<h1>Seeder, our Data Center</h1>
+
+<div class="row">
+  <div class="col-md-4">{{number-box title="Libraries" number=libraries.length}}</div>
+  <div class="col-md-4">{{number-box title="Authors" number=authors.length}}</div>
+  <div class="col-md-4">{{number-box title="Books" number=books.length}}</div>
+</div>
+
+{{seeder-block
+    sectionTitle='Libraries'
+    counter=librariesCounter
+    generateAction='generateLibraries'
+    deleteAction='deleteLibraries'
+    createReady=libDone
+    deleteReady=libDelDone
+}}
+
+{{seeder-block
+  sectionTitle='Authors with Books'
+  counter=authorCounter
+  generateAction='generateBooksAndAuthors'
+  deleteAction='deleteBooksAndAuthors'
+  createReady=authDone
+  deleteReady=authDelDone
+}}
