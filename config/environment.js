@@ -4,15 +4,18 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'library-app',
     environment: environment,
-    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
-    firebase: 'https://luminous-heat-9079.firebaseio.com/',  //改成自己在firebase上APP的地址
+    // contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    // firebase: 'https://luminous-heat-9079.firebaseio.com/',  //改成自己在firebase上APP的地址
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
-      }
+    },
+        EXTEND_PROTOTYPES: {
+         Date: false,
+       }
     },
 
     APP: {

@@ -1,10 +1,8 @@
-// app/adapters/application.js
+import WildemberAdapter from 'wildember/adapters/wildember';
 
-import Ember from 'ember';
-import FirebaseAdapter from 'emberfire/adapters/firebase';
-
-const { inject } = Ember;
-
-export default FirebaseAdapter.extend({
-  firebase: inject.service(),
+export default WildemberAdapter.extend({
+    wilddogConfig: {
+        syncDomain: "wildember.wilddog.com",
+        syncURL: "https://wildember.wilddogio.com" //输入节点 URL
+    }
 });
